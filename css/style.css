@@ -1,0 +1,225 @@
+/** 
+==============
+GENERAL STYLES 
+==============
+**/
+:root {
+    --main: #f90;
+	--inverted-main: #fff;
+	--secondary: #eee;
+	--inverted-secondary: #000;
+	--gray: #eee;
+	--white: #fff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+a, a::after {
+    color: var(--white);
+}
+a:hover {
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.main-color-fg {
+    color: var(--main);  
+}
+.main-color-bg {
+    background-color: var(--main);  
+}
+.inverted-main-color-fg {
+    color: var(--inverted-main);  
+}
+.inverted-main-color-bg {
+    background-color: var(--inverted-main);  
+}
+.secondary-color-fg {
+    color: var(--secondary);  
+}
+.secondary-color-bg {
+    background-color: var(--secondary);  
+}
+.inverted-secondary-color-fg {
+    color: var(--inverted-secondary);  
+}
+.inverted-secondary-color-bg {
+    background-color: var(--inverted-secondary);  
+}
+.gray-color-fg {
+	color: #eee;
+}
+.gray-color-bg {
+	background-color: #eee;
+}
+.white-color-fg {
+	color: var(--white);
+}
+
+.main-left-header {
+	font-size: 24px;
+}
+.sub-left-header {
+	font-size: 16px;
+}
+.main-right-header {
+	font-size: 28px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+.sub-right-header {
+	font-weight: bold;
+	font-size: 12px;
+}
+.header {
+	font-weight: bold;
+	font-size: 24px;
+}
+.small-header {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.text-muted {
+    opacity: 0.5;
+}
+
+/** INTRO section **/
+
+/** My photo **/
+.my-photo {
+	max-width: 192px;
+	max-height: 192px;
+}
+
+/** EDUCATION section **/
+
+/** Timeline style **/
+
+/*
+.timeline {
+    margin: 0 0 0 60px;
+}
+
+label {
+    float: left;
+    margin: 0 0 0 -100px;
+    text-align: right;
+}*/
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+/** SKILLS section **/
+.skill {
+	color: #000;
+	background-color: #eee;
+
+	font-size: 12px;
+
+	align-items: center;
+	border-radius: 4px;
+	display: inline-flex;
+	height: 2em;
+	justify-content: center;
+	line-height: 1.5;
+	padding-left: .5em;
+	padding-right: .5em;
+	white-space: nowrap;
+}
+	.skill-combined {
+		white-space: nowrap;
+	}
+	.skill.skill-left {
+		margin-right: -0.15em;
+		border-bottom-right-radius: 0;
+		border-top-right-radius: 0;
+	}
+	.skill.skill-right {
+		background-color: #fff;
+		margin-left: -0.15em;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+	}
+
+/** TIMELINE section **/
+.timeline {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; }
+  .timeline .timeline-header {
+    background-color: var(--main);
+	border-radius: 10%;
+	width: 4em;
+    min-width: 4em;
+    max-width: 8em;
+    word-wrap: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center; }
+  .timeline .timeline-item {
+    display: flex;
+    display: -webkit-flex;
+    position: relative;
+    margin-left: 2em;
+    padding-bottom: 2em;
+	}
+    .timeline .timeline-item::before {
+      content: "";
+      background-color: #dbdbdb;
+      display: block;
+      width: 0.1em;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0; }
+    .timeline .timeline-item .timeline-marker {
+      position: absolute;
+      background: #dbdbdb;
+      border: 0.1em solid #dbdbdb;
+      border-radius: 100%;
+      content: "";
+      display: block;
+      height: 0.8em;
+      left: -0.35em;
+      top: 1.2rem;
+      width: 0.8em; }
+    .timeline .timeline-item .timeline-content {
+      padding: 1em 0 0 .5em;
+      padding: 1em 0 0 2em; }
+      .timeline .timeline-item .timeline-content .heading {
+        font-weight: 600; }
